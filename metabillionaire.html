@@ -165,21 +165,21 @@ input:checked+.slider:before{transform:translateX(26px);}
         <td style="width:68px;height:34px;padding-right:8px;" align="right">Difficulty</td>
         <td><input onchange="setup.puzzle_fifteen.diff=this.value;fifteen_update();" value="20" class="input_text" type="text"></td>
         </tr>
-        <tr>
+        <tr style="display:none">
         <td style="height:34px;padding-right:8px;" align="right">Width</td>
         <td><input id="width" onchange="setup.puzzle_fifteen.size[0]=parseInt(this.value);fifteen_update();" value="1024" class="input_text" type="text"></td>
         </tr>
-        <tr>
+        <tr style="display:none">
         <td style="height:34px;padding-right:8px;" align="right">Height</td>
         <td><input id="height" onchange="setup.puzzle_fifteen.size[1]=parseInt(this.value);fifteen_update();" value="1281" class="input_text" type="text"></td>
         </tr>
-        <tr>
+        <!-- <tr>
         <td style="height:34px;padding-right:8px;" align="right">Image fill</td>
         <td align="center"><label class="switch">
             <input type="checkbox" onchange="setup.puzzle_fifteen.art.ratio=this.checked;fifteen_update();">
             <span class="slider round"></span>
         </label></td>
-        </tr>
+        </tr> -->
         <tr>
         <td style="height:34px;padding-right:8px;" align="right">Grid width</td>
         <td><input id="grid_width" onchange="setup.puzzle_fifteen.grid[0]=parseInt(this.value);fifteen_update();" value="3" class="input_text" type="text"></td>
@@ -199,23 +199,23 @@ input:checked+.slider:before{transform:translateX(26px);}
             <span class="slider round"></span>
         </label></td>
         </tr>
-        <tr>
+        <!-- <tr>
         <td style="height:34px;padding-right:8px;" align="right">Puzzle fill</td>
         <td align="center"><label class="switch">
             <input type="checkbox" onchange="setup.puzzle_fifteen.fill=this.checked;if(!this.checked){window.removeEventListener('resize',fifteen_resize,true);f.style.transform='scale(1)'};fifteen_update();" checked>
             <span class="slider round"></span>
         </label></td>
-        </tr>
-        <tr>
+        </tr> -->
+        <tr style="display:none">
         <td style="height:34px;padding-right:8px;" align="right">Style blocks</td>
         <td><input id="slot_style" onchange="setup.puzzle_fifteen.style=this.value;fifteen_update();" class="input_text" type="text"></td>
         </tr>
         <tr>
         <td style="height:48px;" colspan="2"><div class="button" onclick="fifteen_update();">Refresh</div></td>
         </tr>
-        <tr>
+        <!-- <tr>
         <td style="height:48px;" colspan="2"><div class="button" onclick="fifteen_build();">Create HTML game</div></td>
-        </tr>
+        </tr> -->
         <tr><td style="height:16px;" colspan="2"></td></tr>
         <tr>
         </tbody>
