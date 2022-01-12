@@ -3,6 +3,8 @@
 <head>
 <title>MetaBillionaire Puzzle</title>
 <link rel="icon" href="assets/images/mb-cover.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 <style>
 body {
@@ -12,7 +14,9 @@ body {
     align-content: center;
     justify-content: center;
     background-image: url("assets/images/mb-cover.png");
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: lighten;
+
 }
 *{
 	font-family:Arial;
@@ -73,17 +77,87 @@ body {
   transition:.2s;
   border-radius:12px;
 }
+.floating-right-top-btn
+{
+    position : absolute;
+    right : 10px;
+    top : 16px;
+    width : 250px;
+    height : 80px;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0);
+    background-blend-mode: lighten;
+    vertical-align: middle;
+}
+.floating-right-top-btn2
+{
+    position : absolute;
+    right : 10px;
+    top : 96px;
+    width : 250px;
+    height : 30px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+    border-radius:5em;
+    padding-top:5px;
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: gold;
+    background-blend-mode: lighten;
+    vertical-align: middle;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #c0007a;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-discord {
+  background: #fffff0;
+  color: white;
+}
 input:checked+.slider{background-color:#e6933c;}
 input:checked+.slider:before{transform:translateX(26px);}
 </style>
 </head>
 <body>
+<div class="floating-right-top-btn">
+    <a href="https://twitter.com/christophera08" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/christopheralbert08" class="fa fa-linkedin"></a>
+    <a href="https://instagram.com/christopheralbert08" class="fa fa-instagram"></a>
+    <!-- <a class="fa fa-discord"><img src="assets/images/discord-logo.png" style="width:28px"></a> -->
+</div>
+<div class="floating-right-top-btn2">By ChristopherA08#1038</div>
 <div id='fifteen'></div> <!--element "fifteen" in which the game will take place-->
 <div style='position:fixed;top:0;left:0;box-shadow:0px 2px 24px rgba(110,95,165,0.25);border-radius:0 0 16px 0;background-color:#fff;width:196px;'>
     <div style="display:none;position:fixed;"><img id="art" src=""/><a id="dwonload"></a><input id="img_file" type="file" accept="image/png,image/gif,image/jpeg,image/webp"/></div>
     <div style="overflow:auto;width:180px;max-height:100vh;height:100%;padding:8px;">
         <table style="border-collapse:collapse;" border="1">
         <tbody>
+        <tr>
+        <td style="height:48px;" colspan="2"><h2 style="text-align: center">By ChristopherA08#1038</h2></td>
+        </tr>
         <tr>
         <td style="height:48px;" colspan="2"><div class="button" onclick="img_file.click();">Load img file</div></td>
         </tr>
@@ -148,6 +222,8 @@ input:checked+.slider:before{transform:translateX(26px);}
         </table>
     </div>
 </div>
+
+
 <script>
 var setup={
      puzzle_fifteen:{
